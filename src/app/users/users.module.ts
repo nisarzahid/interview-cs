@@ -5,10 +5,15 @@ import { ProfileComponent } from './profile/profile.component';
 import { UsersRoutingModule } from './users.routing.module';
 import { UsersService } from '../_services/users.service';
 
+// imagine more imports here
+import { AgmCoreModule } from '@agm/core';
+
 @NgModule({
   imports: [
     CommonModule,
-    UsersRoutingModule
+    
+    UsersRoutingModule,
+
   ],
   declarations: [ListComponent, ProfileComponent],
   providers: [ UsersService]

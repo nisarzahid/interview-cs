@@ -9,13 +9,18 @@ import { Observable } from "rxjs";
 export class UsersService {
   apiUrl = environment.apiUrl;
 
+  users = []
   constructor(private http: HttpClient) {}
 
   getUsers() {
     return this.http.get<any>(this.apiUrl + "users");
+    // .subscribe( results => {
+    //   this.users = results;
+    // });
   }
 
   getUser(id) {
+    //console.log(this.users);
     return this.http.get<any>(this.apiUrl + "users/"+id);
   }
 

@@ -7,6 +7,9 @@ import { UsersModule } from './users/users.module';
 import { AppRoutingModule } from './app.routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
+// imagine more imports here
+import { AgmCoreModule } from '@agm/core';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -16,6 +19,9 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     AppRoutingModule,
     UsersModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'pacific-chalice-174017'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
